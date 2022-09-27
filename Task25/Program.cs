@@ -16,7 +16,12 @@ int PowAToB( int a, int b)
     }
     return result;
 }
+int PowAToBMath( int a, int b)
+{
+    int result = (int)Math.Pow(a,b);
+    return result;
 
+}
 
 void PrintData(string msg, int value)
 {
@@ -25,5 +30,9 @@ void PrintData(string msg, int value)
 
 int a = ReadData("Введите число А: ");
 int b = ReadData("Введите число B: ");
-
+DateTime d1 = DateTime.Now;
 PrintData("Число " + a + " возведенное в степень " + b + " равно = " , PowAToB(a,b));
+Console.WriteLine(DateTime.Now-d1);
+DateTime d2 = DateTime.Now;
+PrintData("Число " + a + " возведенное в степень " + b + " равно = " , PowAToBMath(a,b));
+Console.WriteLine(DateTime.Now-d2);
